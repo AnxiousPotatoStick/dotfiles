@@ -27,7 +27,7 @@ yay -S --noconfirm --answerdiff None --answerclean None --removemake gst-libav g
 cp -rf ./.config ~
 sudo chmod x+ ~/.config
 
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 i3-msg reload
 i3-msg restart
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
