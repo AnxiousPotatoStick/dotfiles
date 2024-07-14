@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo pacman -S zsh
 yay -S --noconfirm --answerdiff None --answerclean None --removemake polybar ulauncher micro copyq flameshot
 
 git clone --depth=1 https://github.com/adi1090x/polybar-themes.git
