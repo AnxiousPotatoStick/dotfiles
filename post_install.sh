@@ -2,8 +2,6 @@
 
 localectl set-x11-keymap us
 
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -rsi --noconfirm
@@ -26,3 +24,5 @@ cp -rf ./.config ~
 
 i3-msg reload
 i3-msg restart
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
