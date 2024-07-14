@@ -20,8 +20,6 @@ cd .. && rm -rf polybar-themes
 
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
-git clone https://github.com/paysonwallach/aqua-lightdm-webkit-theme /usr/share/lightdm-webkit/themes/aqua
-
 echo "Installing fonts"
 
 yay -S --noconfirm --answerdiff None --answerclean None --removemake gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame
