@@ -21,6 +21,7 @@ echo "Installing fonts"
 yay -S --noconfirm --answerdiff None --answerclean None --removemake gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame
 
 cp -rf ./.config ~
+sudo chmod x+ ~/.config
 
 i3-msg reload
 i3-msg restart
