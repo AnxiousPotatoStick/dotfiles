@@ -16,6 +16,7 @@ git clone --depth=1 https://github.com/adi1090x/polybar-themes.git
 cd polybar-themes
 chmod +x setup.sh
 yes '1' | ./setup.sh
+cd .. && rm -rf polybar-themes
 
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
