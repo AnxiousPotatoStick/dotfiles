@@ -1,0 +1,12 @@
+# i3 config file (v4)
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+
+include keybinds
+include styling
+
+exec_always --no-startup-id ulauncher --
+exec_always --no-startup-id copyq
+exec --no-startup-id ~/.config/polybar/launch.sh --forest
+exec_always --no-startup-id picom --config ~/.config/i3/picom.conf 

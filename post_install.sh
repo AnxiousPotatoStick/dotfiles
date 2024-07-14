@@ -21,3 +21,8 @@ git clone https://github.com/paysonwallach/aqua-lightdm-webkit-theme /usr/share/
 echo "Installing fonts"
 
 yay -S --noconfirm --answerdiff None --answerclean None --removemake gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame
+
+cp -rf ./.config ~
+
+i3-msg reload
+i3-msg restart

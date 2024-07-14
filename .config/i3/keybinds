@@ -1,0 +1,85 @@
+# i3 config file (v4)
+
+# Key to rule them all : Super(Windows) or Alt key?
+
+# Mod4 = Windows or Super key on keyboard
+# Mod1 = Alt key on keyboard
+
+#set Super key
+set $win Mod4
+set $alt Mod1
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $win+Shift+r restart
+
+# reload the configuration file
+bindsym $win+Shift+c reload
+
+# switch to workspace
+bindsym $win+1 workspace 1
+bindsym $win+2 workspace 2
+bindsym $win+3 workspace 3
+bindsym $win+4 workspace 4
+bindsym $win+5 workspace 5
+bindsym $win+6 workspace 6
+bindsym $win+7 workspace 7
+bindsym $win+8 workspace 8
+bindsym $win+9 workspace 9
+
+# move focused container to workspace
+bindsym $win+Shift+1 move container to workspace 1
+bindsym $win+Shift+2 move container to workspace 2
+bindsym $win+Shift+3 move container to workspace 3
+bindsym $win+Shift+4 move container to workspace 4
+bindsym $win+Shift+5 move container to workspace 5
+bindsym $win+Shift+6 move container to workspace 6
+bindsym $win+Shift+7 move container to workspace 7
+bindsym $win+Shift+8 move container to workspace 8
+bindsym $win+Shift+9 move container to workspace 9
+
+# Use Mouse+$win to drag floating windows to their wanted position
+floating_modifier $alt
+
+# kill focused window
+bindsym $win+q kill
+
+# start rofi
+bindsym $win+r exec --no-startup-id rofi -show drun
+
+# lock
+bindsym $win+l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, wine "default"
+bindsym $alt+space floating toggle
+
+#navigate workspaces next / previous
+bindsym Ctrl+$win+Right workspace next
+bindsym Ctrl+$win+Left workspace prev
+
+bindsym $alt+Tab workspace back_and_forth
+
+# orientation for new workspaces
+default_orientation horizontal
+
+# split in horizontal orientation
+# bindsym $win+h split h
+
+# split in vertical orientation
+# bindsym $win+v split
+bindsym $win+f fullscreen toggle
+
+# change focus between tiling / floating windows
+bindsym $alt+ctrl+space focus mode_toggle
+
+# open terminal
+bindsym $win+Return exec --no-startup-id kitty;focus
+
+# screenshot
+bindsym Shift+$win+s exec --no-startup-id flameshot gui;focus
+
+# clipbaord, confiured in copyq
+# bindsym $win+v exec --no-startup-id copyq toggle;focus
+
+# audio
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
