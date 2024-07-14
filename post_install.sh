@@ -9,7 +9,7 @@ cd yay
 makepkg -rsi
 cd .. && rm -rf yay
 
-yay -S gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame pacman-contrib ttf-ms-win11-auto ulauncher
+yay -S --noconfirm --answerdiff None --answerclean None --removemake gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame pacman-contrib ttf-ms-win11-auto ulauncher
 
 #sudo mkdir /etc/pacman.d/hooks
 #sudo nano /etc/pacman.d/hooks/clean_package_cache.hook
@@ -20,4 +20,4 @@ git clone https://github.com/paysonwallach/aqua-lightdm-webkit-theme /usr/share/
 
 echo "Installing fonts"
 
-yay -S gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame
+yay -S --noconfirm --answerdiff None --answerclean None --removemake gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi x265 x264 lame
