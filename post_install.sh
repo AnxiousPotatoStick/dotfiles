@@ -12,6 +12,11 @@ yay -S --noconfirm --answerdiff None --answerclean None --removemake gst-libav g
 #sudo mkdir /etc/pacman.d/hooks
 #sudo nano /etc/pacman.d/hooks/clean_package_cache.hook
 
+git clone --depth=1 https://github.com/adi1090x/polybar-themes.git
+cd polybar-themes
+chmod +x setup.sh
+yes '1' | ./setup.sh
+
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
 git clone https://github.com/paysonwallach/aqua-lightdm-webkit-theme /usr/share/lightdm-webkit/themes/aqua
@@ -23,7 +28,7 @@ yay -S --noconfirm --answerdiff None --answerclean None --removemake gst-libav g
 cp -rf ./.config ~
 sudo chmod x+ ~/.config
 
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 i3-msg reload
 i3-msg restart
-
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
